@@ -8,5 +8,6 @@ Check out the slides in full screen: http://regisb.github.io/openedx-conference-
 
 ## Usage
 
-    git clone https://github.com/regisb/openedx-conference-2016 slides/
-    firefox slides/index.html
+    git clone https://github.com/regisb/openedx-conference-2016
+    cd openedx-conference-2016/
+    python -m SimpleHTTPServer 8042 index.html

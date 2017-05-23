@@ -25,7 +25,7 @@
             .green {
                 color: #17ff2e;
             }
-            .highlight {
+            .highlight, .reveal h1.highlight, .reveal h2.highlight, .reveal h3.highlight, .reveal h4.highlight {
                 color: #e7ad52;
             }
         </style>
@@ -92,7 +92,165 @@
 
                 <section data-background-image="./static/img/terror.gif"></section>
 
+                <section data-background-image="./static/img/keepcalm.jpg"></section>
+
                 <section>
+                    <h3>1. <span class="fragment">Install <a href="https://github.com/regisb/videofront">Videofront</a></span></h3>
+                    <p class="fragment">A small, easy-to-deploy Django project (3.3k loc)</p>
+                    <h3>2. <span class="fragment">Install <a href="github.com/regisb/videofront-xblock">Videofront XBlock</a></span></h3>
+                    <p class="fragment">A video XBlock based on video.js</p>
+                    <h3>3. <span class="fragment">Send me your <span class="highlight">credit card number</span></span></h3>
+                </section>
+
+                <section>
+                    <p>no but seriously</p>
+                    <h1 style="font-size: 1200%;">€?</h1>
+                </section>
+
+                <section>
+                    <h2>Video hosting is</h2>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td style="border-right: 1px solid;"><h3><i class="fa fa-hdd-o highlight"></i> Storage (Disk)</h3></td>
+                                <td rowspan="2" style="vertical-align: middle;"><h3>O(#videos)</h3></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"><h3><i class="fa fa-microchip highlight"></i> Transcoding (CPU)</h3></td>
+                            </tr>
+                            <tr>
+                                <td style="border-right: 1px solid;"><h3><i class="fa fa-share-alt highlight"></i> Streaming (Bandwidth)</h3></td>
+                                <td><h3>O(#users)</h3></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section data-background-image="./static/img/costs/costs-0.svg"></section>
+                <section data-background-image="./static/img/costs/costs-1.svg"></section>
+                <section data-background-image="./static/img/costs/costs-2.svg"></section>
+                <section data-background-image="./static/img/costs/costs-3.svg"></section>
+                <section data-background-image="./static/img/costs/costs-4.svg"></section>
+
+                <section>
+                    <h4>Price per course: 20 x 10-minute videos, 1000 users/month</h4>
+                    <!--
+                        3 resolutions: 330 Mb / video =====> 6.5 Gb / course
+                        Standard resolution : 87 Mb / video =====> 1.8 Gb / video / user ====> 1.8 Tb / course
+
+                        S3 = $0.023 / Gb ======> $0.15
+                        ElasticTranscoder = $0.0735 / minute =======> $14.7
+                        Cloudfront = $0.085 / Gb ====> $150
+                    -->
+                    <p><i class="fa fa-hdd-o highlight"></i> Storage: 6.6 Gb
+                    <i class="fa fa-microchip highlight"></i> Transcoding: 600 minutes
+                    <i class="fa fa-share-alt highlight"></i> Streaming: 1.8 Tb</p>
+                    <table class="fragment">
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td><h4><i class="highlight fa fa-hdd-o"></i></h4></td>
+                                <td><h4><i class="highlight fa fa-microchip"></i></h4></td>
+                                <td><h4><i class="highlight fa fa-share-alt"></i></h4></td>
+                                <td><h4 class="highlight">€/month</h4></td>
+                                <td><h4 class="highlight">Plan</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="highlight">Local backend</h4></td>
+                                <td>Disk</td>
+                                <td>CPU</td>
+                                <td>Bandwidth</td>
+                                <td class="fragment"><h3>10€</h3></td>
+                                <td class="fragment"><h4>Gold</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="highlight">AWS backend</h4></td>
+                                <td>S3</td>
+                                <td>Elastic Transcoder</td>
+                                <td>Cloudfront</td>
+                                <td class="fragment"><h3>150€</h3></td>
+                                <td class="fragment"><h4>Platinum</h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!--<p style="font-size: 75%;">(hit <i class="fa fa-arrow-down"></i> for details)</p>-->
+                </section>
+
+                <section data-background-image="./static/img/allbackends.jpg" data-background-size="contain"></section>
+
+                <section>
+                    <h4>Price per course: 20 x 10-minute videos, 1000 users/month</h4>
+                    <p><i class="fa fa-hdd-o highlight"></i> Storage: 6.6 Gb
+                    <i class="fa fa-microchip highlight"></i> Transcoding: 600 minutes
+                    <i class="fa fa-share-alt highlight"></i> Streaming: 1.8 Tb</p>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td><h4><i class="highlight fa fa-hdd-o"></i></h4></td>
+                                <td><h4><i class="highlight fa fa-microchip"></i></h4></td>
+                                <td><h4><i class="highlight fa fa-share-alt"></i></h4></td>
+                                <td><h4 class="highlight">€/month</h4></td>
+                                <td class="highlight">Plan</td>
+                            </tr>
+                            <tr style="opacity: 0.25;">
+                                <td><h4 class="highlight">Local backend</h4></td>
+                                <td>Disk</td>
+                                <td>CPU</td>
+                                <td>Bandwidth</td>
+                                <td><h3>10€</h3></td>
+                                <td><h4>Gold</h4></td>
+                            </tr>
+                            <tr style="opacity: 0.25;">
+                                <td><h4 class="highlight">AWS backend</h4></td>
+                                <td>S3</td>
+                                <td>Elastic Transcoder</td>
+                                <td>Cloudfront</td>
+                                <td><h3>150€</h3></td>
+                                <td><h4>Platinum</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h4 class="highlight">Custom backend</h4></td>
+                                <td>Custom</td>
+                                <td>Custom</td>
+                                <td>Custom</td>
+                                <td><h3>X€</h3></td>
+                                <td class="fragment"><h4 class="rainbow">Rainbow</h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!--<p style="font-size: 75%;">(hit <i class="fa fa-arrow-down"></i> for details)</p>-->
+                </section>
+
+                <section>
+                    <h3>bandwidth?</h3>
+                </section>
+
+                <section data-background-image="./static/img/bandwidth.jpg"></section>
+                <section>
+                    <h3>Required average bandwidth: 5.3 Mbps</h3>
+                    <h2 class="fragment">1 server = 250 Mbps</h2>
+                </section>
+                
+                <section>
+                    <p>no but seriously</p>
+                    <h1>Will it scale?</h1>
+                </section>
+
+                <section data-background-image="./static/img/fun.png"></section>
+
+                <section>
+                    <h2 class="highlight">www.fun-mooc.fr</h2>
+                    <h3>1M learners</h3>
+                    <h3>300 courses</h3>
+                    <h3>8 months</h3>
+                    <h3 class="fragment"><i class="fa fa-check green"></i></h3>
+                </section>
+
+                <section>
+                    <h2 class="rainbow">Migrate your videos today!</h2>
                     <h3>Repositories</h3>
                     <p>Videofront: <a href="https://github.com/regisb/videofront">https://github.com/regisb/videofront</a></p>
                     <p>Videofront XBlock: <a href="https://github.com/regisb/videofront-xblock">https://github.com/regisb/videofront-xblock</a></p>
@@ -105,12 +263,25 @@
             </div>
         </div>
         <script src="static/js/reveal.js"></script>
+        <script src="static/js/jquery-3.2.1.min.js"></script>
         <script>
             Reveal.initialize({
                 controls: false,
                 history: true,
                 transition: 'fade'
 
+            });
+            
+            $(".rainbow").each(function(index, elt) {
+                var colors = ["red", "orange", "yellow", "green", "blue", "magenta", "purple"];
+                var content = "";
+                var letters = elt.textContent.split("");
+                for(var i = 0; i < letters.length; i++) {
+                    var color = colors[i % colors.length];
+                    content += "<span style=\"color: " + color + ";\">" + letters[i] + "</span>"
+                }
+                $(elt).html(content);
+                console.log(content);
             });
         </script>
     </body>
