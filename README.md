@@ -4,7 +4,7 @@ This repo contains the slides from my talk: "Videofront: A Self-Hosted Youtube".
 
 Check out the slides in full screen: http://regisb.github.io/openedx-conference-2017/
 
-(video not yet available)
+Video presentation [available on youtube](https://youtu.be/J3Jz1c1w6Z8?t=18m50s) (ironic, isn't it?).
 
 ## Usage
 
